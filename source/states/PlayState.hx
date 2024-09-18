@@ -2845,8 +2845,10 @@ class PlayState extends MusicBeatState
 		if (note != null && guitarHeroSustains && note.parent == null) {
 			if(note.tail.length > 0) {
 				note.alpha = 0.35;
+				note.multAlpha = 0.35;
 				for(childNote in note.tail) {
 					childNote.alpha = note.alpha;
+					childNote.multAlpha = note.multAlpha;
 					childNote.missed = true;
 					childNote.canBeHit = false;
 					childNote.ignoreNote = true;

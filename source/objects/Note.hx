@@ -487,7 +487,10 @@ class Note extends FlxSprite
 		if (tooLate && !inEditor)
 		{
 			if (alpha > 0.3)
-				alpha = 0.3;
+			{
+				alpha = 0.3; //Idk if alpha = 0.3; is nessesary here so i'll leave it just in case -Rom
+				multAlpha = 0.3;
+			}
 		}
 	}
 
